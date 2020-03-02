@@ -21,11 +21,3 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*.rb"
-
-Metrics/LineLength:
-  IgnoredPatterns:
-    - "^"
-    - "#"
-    - "!"
-  Exclude:
-    - "db/seeds.rb"
