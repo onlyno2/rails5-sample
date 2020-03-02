@@ -1,0 +1,31 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - tmp/**/*
+    - vendor/**/*
+    - config/**/*
+    - bin/**/*
+    - Gemfile
+    - Gemfile.lock
+    - Rakefile
+  TargetRubyVersion: 2.6
+
+# Missing magic comment # frozen_string_literal: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Missing top-level class documentation comment
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*.rb"
+
+Metrics/LineLength:
+  IgnoredPatterns:
+    - "^"
+    - "#"
+    - "!"
+  Exclude:
+    - "db/seeds.rb"
