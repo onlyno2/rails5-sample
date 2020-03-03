@@ -21,3 +21,6 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*.rb"
+
+Style/ClassAndModuleChildren:
+  Enabled: false
