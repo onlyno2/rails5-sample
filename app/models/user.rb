@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  paginates_per 5
   before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
@@ -23,7 +24,7 @@ class User < ApplicationRecord
   # Remembers a user in the database for use in persistent sessions.
   def remember
     self.remember_token = User.new_token
-    update_attribute(:remember_digest, User.digest(remember_token))
+    update_attribute(:remember_digest,  User.digest(remember_token))
   end
 
   # Returns true if the given token matches the digest.
