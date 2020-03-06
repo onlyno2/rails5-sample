@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    if user&.authenticate(params[:session][:password])
+    if @user&.authenticate(params[:session][:password])
       authenticated_redirect
     else
       flash.now[:danger] = 'Invalid email/password combination'
