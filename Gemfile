@@ -10,6 +10,8 @@ gem 'faker'
 gem 'kaminari'
 gem 'bootstrap-sass', '3.3.7'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'cloudinary'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
