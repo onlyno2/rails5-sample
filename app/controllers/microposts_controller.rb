@@ -38,7 +38,8 @@ class MicropostsController < ApplicationController
   end
 
   def image_size
-    return if params[:micropost][:picture].size < 5.megabytes # return if image has size < 5Mb
+    return if params[:micropost][:picture].size < 5.megabytes
+
     flash[:danger] = 'Upload error. File size must less than 5Mb'
     redirect_to root_url
   end
